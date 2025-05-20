@@ -11,14 +11,24 @@ export const aiProjects = [
     technologies: ['Python', 'NLTK', 'spaCy', 'Flask', 'Deep Learning', 'NLP']
   },
   {
-    id: 'image-recognition-cv',
-    title: 'Object Detection for Retail Analytics',
-    description: 'Built a computer vision model to detect and classify products on shelves, providing insights for inventory management. Utilized transfer learning with a CNN for enhanced accuracy.',
-    imageUrl: '/images/placeholder-cv.png', // Example: place in public/images/
-    githubLink: 'https://github.com/yourusername/cv-object-detection',
-    demoLink: 'https://your-cv-demo.com',
-    technologies: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'Computer Vision', 'CNN']
-  },
+    id: 'construct-agent',
+    title: 'ConstructAgent: AI Site Operations Assistant (ConTech Hackathon)',
+    description: 'Built an AI assistant for construction sites using Python (Flask), Dialogflow CX, and Africa\'s Talking to manage hazard logs, attendance, and deliveries via SMS/USSD, with a real-time React dashboard.',
+    imageUrl: '/images/construct-agent-dashboard.png', // Create this image and place in my-ai-portfolio/public/images/
+    // or imageUrl: constructAgentImage,
+    githubLink: 'https:///github.com/juicecola/construct_agent_agent', // Replace YOUR_USERNAME with juicecola or your actual username
+    demoLink: 'YOUR_CONSTRUCT_AGENT_DEMO_URL_OR_VIDEO_LINK_HERE', // Replace or set to null
+    technologies: [
+      'Python',
+      'Flask',
+      'React',
+      'TypeScript',
+      'Dialogflow CX (NLP)',
+      'Africa\'s Talking (SMS/USSD)',
+      'API Development',
+      , // Add if applicable
+    ]
+  },,
   {
     id: 'uchumi-connect-marketpulse',
     title: 'Marketpulse: AI News Analysis for SMBs (Nation Hackathon 2.0)',

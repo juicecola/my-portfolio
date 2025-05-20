@@ -7,7 +7,8 @@ function AboutPage() {
     'Restful API', 'GCP', 'CI/CD Pipelines', 'Pandas', 'NumPy',
     'Natural Language Processing (NLP)', 'Computer Vision (CV)',
     'Machine Learning', 'Deep Learning', 'Git & GitHub', 'Docker',
-    'MySQL', 'Redis', 'SSH', 'LLM', 'Linux', 'NoSQL'
+    'MySQL', 'Redis', 'SSH', 'LLM', 'Linux', 'NoSQL', 'API', 'Flask',
+    'FastAPI', 'Django',
   ];
 
   return (

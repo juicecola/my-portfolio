@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
-          Your Name
+          Munyi
         </Link>
         <div className="space-x-6">
           <NavLink
