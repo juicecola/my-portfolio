@@ -1,0 +1,10 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Add some base styling or custom font imports here */
+body {
+  font-family: 'Inter', sans-serif; /* Matches the Tailwind config example */
+  @apply bg-gray-50 text-gray-800 antialiased;
+}
