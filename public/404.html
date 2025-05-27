@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Important: Ensure paths to assets like favicons are correct if GitHub Pages serves 404.html from the root
+         For a URL like 'username.github.io/repo/about' where 'repo/about' is the 404,
+         a path like '/vite.svg' might resolve to 'username.github.io/vite.svg'.
+         If your vite.svg is at 'username.github.io/repo/vite.svg', you might need to adjust,
+         or rely on the redirect to index.html to fix asset paths.
+         For Vite, if vite.svg is in public/, '/vite.svg' will be correct after deployment to a subdirectory
+         if your `base` config in vite.config.js is set (e.g., base: '/my-ai-portfolio/').
+    -->
+    <link rel="icon" type="image/svg+xml" href="/my-ai-portfolio/vite.svg" /> <!-- Adjusted path assuming base config -->
+    <meta name="viewport" content="width=device-width, initial-scale-1.0" />
+    <title>Page Not Found - My AI Portfolio</title> <!-- Slightly different title for clarity -->
+
+    <!-- Example for Inter font from Google Fonts (same as index.html) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // This script takes the current path and redirects it to index.html
+      // with the path retained in a way that React Router can pick it up.
+
+      // Set this to the number of path segments that are part of your site's base URL on GitHub Pages
+      // If your URL is https://username.github.io/repo-name/, then segmentCount is 1 (for /repo-name/)
+      // If you were using a custom domain like https://yourdomain.com/, then segmentCount would be 0.
+      var segmentCount = 1; // For juicecola.github.io/my-ai-portfolio/
+
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' + // Using ?p=/ as the marker
+        l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+    <!-- You can optionally put a "Redirecting..." message or a simple version of your app shell here -->
+    <!-- The main <div id="root"></div> and script tag are kept to ensure the page looks
+         like the main app if the redirect is slow or JS is momentarily disabled,
+         but the redirect script should fire before the React app fully loads from this 404.html.
+    -->
+    <div id="root">
+        <!-- Optional: Simple loading message or spinner if you want -->
+        <!-- <p style="text-align: center; margin-top: 50px; font-family: Inter, sans-serif;">Loading portfolio...</p> -->
+    </div>
+    <!-- This script tag will likely not execute fully before the redirect,
+         but having it matches the index.html structure.
+         The actual app loads from index.html after redirection.
+    -->
+    <script type="module" src="/my-ai-portfolio/src/main.jsx"></script> <!-- Adjusted path assuming base config -->
+  </body>
+</html>
