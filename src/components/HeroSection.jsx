@@ -6,7 +6,7 @@ function HeroSection() {
         Hi, I'm Eric Munyi.
       </h1>
       <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
-        I'm a Software Developer specializing in Artificial Intelligence, passionate about building intelligent systems that solve real-world problems.
+        I'm a Software Developer passionate about building intelligent systems that solve real-world problems.
       </p>
       {/* Optional: Scroll down indicator or a subtle animation could go here */}
       {/* <a

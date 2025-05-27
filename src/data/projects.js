@@ -7,7 +7,7 @@ export const aiProjects = [
     imageUrl: '/images/aiqtoolkit-streamlit-ui.png', // Create this image and place in my-ai-portfolio/public/images/
     // or imageUrl: aiqToolkitImage,
     githubLink: 'https://github.com/juicecola/AIQToolkit', // Verify this is the correct public link
-    demoLink: 'YOUR_AIQTOOLKIT_STREAMLIT_DEMO_OR_VIDEO_LINK_HERE', // Replace or set to null
+    //demoLink: 'YOUR_AIQTOOLKIT_STREAMLIT_DEMO_OR_VIDEO_LINK_HERE', // Replace or set to null
     technologies: [
       'NVIDIA AIQToolkit',
       'Python',
