@@ -27,7 +27,7 @@ export const aiProjects = [
     imageUrl: '/images/construct-agent-dashboard.png', // Create this image and place in my-ai-portfolio/public/images/
     // or imageUrl: constructAgentImage,
     githubLink: 'https:///github.com/juicecola/construct_agent_agent', // Replace YOUR_USERNAME with juicecola or your actual username
-    demoLink: 'YOUR_CONSTRUCT_AGENT_DEMO_URL_OR_VIDEO_LINK_HERE', // Replace or set to null
+    //demoLink: 'YOUR_CONSTRUCT_AGENT_DEMO_URL_OR_VIDEO_LINK_HERE', // Replace or set to null
     technologies: [
       'Python',
       'Flask',
@@ -46,7 +46,7 @@ export const aiProjects = [
     imageUrl: '/images/uchumi-connect-dashboard.png', // Replace with your actual image path
     // or imageUrl: uchumiConnectImage,
     githubLink: 'https://github.com/juicecola/marketpulse-kenya', // Verify this is the correct public link
-    demoLink: 'YOUR_STREAMLIT_DEMO_URL_OR_VIDEO_LINK_HERE', // Replace this or set to null
+    //demoLink: 'YOUR_STREAMLIT_DEMO_URL_OR_VIDEO_LINK_HERE', // Replace this or set to null
     technologies: [
       'Python',
       'Flask (API)',
