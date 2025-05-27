@@ -1,14 +1,24 @@
 // src/data/projects.js
 export const aiProjects = [
   {
-    id: 'ai-chatbot-nlp',
-    title: 'Intelligent Customer Support Chatbot',
-    description: 'Developed an NLP-powered chatbot to handle customer inquiries, focusing on intent recognition and contextual understanding. Leveraged advanced NLP techniques for human-like conversation flow.',
-    imageUrl: '/images/placeholder-chatbot.png', // Example: place in public/images/
-    // Or import image from src/assets: import chatbotImg from '../assets/chatbot.png'; then use chatbotImg
-    githubLink: 'https://github.com/yourusername/ai-chatbot',
-    demoLink: null, // 'https://your-chatbot-demo.com',
-    technologies: ['Python', 'NLTK', 'spaCy', 'Flask', 'Deep Learning', 'NLP']
+    id: 'aiqtoolkit-enhancements',
+    title: 'NVIDIA AIQToolkit: Custom LLM Integrations & UI',
+    description: 'Contributed to a fork of NVIDIA\'s AIQToolkit by integrating Anthropic Claude and NVIDIA NIMs, implementing conversational memory, and developing a Streamlit UI and backend API for enhanced agent interaction and usability.',
+    imageUrl: '/images/aiqtoolkit-streamlit-ui.png', // Create this image and place in my-ai-portfolio/public/images/
+    // or imageUrl: aiqToolkitImage,
+    githubLink: 'https://github.com/juicecola/AIQToolkit', // Verify this is the correct public link
+    demoLink: 'YOUR_AIQTOOLKIT_STREAMLIT_DEMO_OR_VIDEO_LINK_HERE', // Replace or set to null
+    technologies: [
+      'NVIDIA AIQToolkit',
+      'Python',
+      'LangChain',
+      'Anthropic Claude',
+      'NVIDIA NIMs',
+      'LLM Integration',
+      'Streamlit (UI)',
+      'API Development',
+      'Conversational Memory'
+    ]
   },
   {
     id: 'construct-agent',
