@@ -8,7 +8,7 @@ import ScrollToTop from './components/ScrollToTop.jsx'; // We'll create this hel
 
 function App() {
   return (
-    <Router>
+    <Router basename="/my-portfolio">
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
