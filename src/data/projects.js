@@ -2,22 +2,23 @@
 export const aiProjects = [
   {
     id: 'aiqtoolkit-enhancements',
-    title: 'NVIDIA AIQToolkit: Custom LLM Integrations & UI',
-    description: 'Contributed to a fork of NVIDIA\'s AIQToolkit by integrating Anthropic Claude and NVIDIA NIMs, implementing conversational memory, and developing a Streamlit UI and backend API for enhanced agent interaction and usability.',
-    imageUrl: '/my-portfolio/images/aiqtoolkit-streamlit-ui.png', // Create this image and place in my-ai-portfolio/public/images/
-    // or imageUrl: aiqToolkitImage,
-    githubLink: 'https://github.com/juicecola/AIQToolkit', // Verify this is the correct public link
-    //demoLink: 'YOUR_AIQTOOLKIT_STREAMLIT_DEMO_OR_VIDEO_LINK_HERE', // Replace or set to null
+    title: 'NVIDIA AIQToolkit: LLM Integrations, API & React Chat UI', // Updated title
+    description: 'Enhanced a fork of NVIDIA\'s AIQToolkit by integrating Anthropic Claude and NVIDIA NIMs, implementing conversational memory, developing a backend API, and building a dedicated React & TypeScript chatbot UI for seamless agent interaction.', // Updated description
+    imageUrl: '/my-portfolio/images/aiqtoolkit-streamlit-ui.png', // NEW IMAGE - update filename as needed
+    githubLink: 'https://github.com/juicecola/AIQToolkit',
+    demoLink: 'https://drive.google.com/file/d/1VAaBNBJA6VTpnK65KB37eYHaJWP846t8/view?usp=sharing', // Or live React UI URL if backend is also live
     technologies: [
       'NVIDIA AIQToolkit',
-      'Python',
+      'Python (Backend)',
+      'React (Frontend)',
+      'TypeScript',
+      'Vite',
       'LangChain',
       'Anthropic Claude',
       'NVIDIA NIMs',
-      'LLM Integration',
-      'Streamlit (UI)',
       'API Development',
-      'Conversational Memory'
+      'Conversational Memory',
+      // 'Streamlit (Legacy UI)', // Optional: keep if still relevant or remove
     ]
   },
   {
