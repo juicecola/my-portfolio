@@ -1,77 +1,76 @@
 // src/components/ContactSection.jsx
-import React from 'react';
-// Optional: Import icons if you want to use a library like react-icons
-// For example, to match a tech theme, you might use icons from FontAwesome or Heroicons via react-icons
-// import { FaLinkedinIn, FaTwitter, FaGithub } from 'react-icons/fa'; // Example for social icons
-// import { HiOutlineMail } from 'react-icons/hi'; // Example for envelope icon
+import React, { useState, useRef } from 'react'; // Added useRef
+import emailjs from '@emailjs/browser';
+// ... (your icons or other imports)
 
 function ContactSection() {
+  const form = useRef(); // Create a ref for the form
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(''); // 'success', 'error', or ''
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    // TODO: Implement form submission logic (e.g., using Formspree, Netlify Forms, or a backend)
-    alert("Form submitted! (This is a placeholder - actual submission not implemented yet)");
-    event.target.reset();
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    // --- Access environment variables ---
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const userID = import.meta.env.VITE_EMAILJS_USER_ID;
+
+    if (!serviceID || !templateID || !userID) {
+        console.error("EmailJS environment variables are not set!");
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+        alert("Configuration error. Message could not be sent.");
+        return;
+    }
+
+    // The `sendForm` function takes the Service ID, Template ID, the form element (or its selector), and your User ID.
+    // Ensure your form input fields have `name` attributes that match the variables in your EmailJS template
+    // e.g., name="from_name", name="from_email", name="message"
+    emailjs.sendForm(serviceID, templateID, form.current, userID)
+      .then((result) => {
+          console.log('EmailJS Success:', result.text);
+          setSubmitStatus('success');
+          setIsSubmitting(false);
+          alert('Message sent successfully! Thank you.');
+          form.current.reset(); // Reset the form fields
+      }, (error) => {
+          console.error('EmailJS Error:', error.text);
+          setSubmitStatus('error');
+setIsSubmitting(false);
+          alert(`Failed to send message. Error: ${error.text || 'Unknown error'}`);
+      });
   };
 
   return (
-    // Use a light gray or off-white background for the section, or keep it white
-    <section id="contact" className="py-16 md:py-24 bg-slate-100 dark:bg-slate-800 px-6"> {/* Light gray for light mode, darker for dark mode */}
+    <section id="contact" className="py-16 md:py-24 bg-slate-100 dark:bg-slate-800 px-6">
       <div className="container mx-auto max-w-4xl">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
-
-          {/* Left Column: Text and Social Links */}
+          {/* Left Column: Text and Social Links (as before) */}
           <div className="text-slate-700 dark:text-slate-300">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4 flex items-center">
+            {/* ... your "Let's Connect" text and social links ... */}
+             <h2 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4 flex items-center">
               Let's Connect!
-              {/* Using a simple emoji or a themed icon from react-icons */}
               <span role="img" aria-label="envelope" className="ml-3 text-2xl">✉️</span>
-              {/* Or <HiOutlineMail className="ml-3 text-3xl" /> */}
             </h2>
             <p className="mb-6 leading-relaxed">
               Interested in collaborating, have a question, or just want to chat about AI and tech?
               Feel free to reach out through my social channels or send me a message using the form.
             </p>
-            <div className="flex space-x-6 mb-8 md:mb-0">
-              <a
-                href="https://linkedin.com/in/yourusername" // Replace
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors text-3xl"
-              >
-                {/* <FaLinkedinIn /> */}
-                LI {/* Placeholder */}
-              </a>
-              <a
-                href="https://twitter.com/yourusername" // Replace
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-                className="text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors text-3xl"
-              >
-                {/* <FaTwitter /> */}
-                TW {/* Placeholder */}
-              </a>
-              <a
-                href="https://github.com/juicecola" // Replace
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors text-3xl"
-              >
-                {/* <FaGithub /> */}
-                GH {/* Placeholder */}
-              </a>
-            </div>
+            {/* ... your social media links ... */}
           </div>
 
           {/* Right Column: Contact Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Add ref={form} to your form element */}
+          <form ref={form} onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="sr-only">Name</label>
+              {/* Ensure 'name' attributes match your EmailJS template variables */}
               <input
                 type="text"
-                name="name"
+                name="from_name" // Match EmailJS template variable, e.g., {{{from_name}}}
                 id="name"
                 placeholder="Your Name"
                 required
@@ -82,7 +81,7 @@ function ContactSection() {
               <label htmlFor="email" className="sr-only">Email</label>
               <input
                 type="email"
-                name="email"
+                name="from_email" // Match EmailJS template variable, e.g., {{{from_email}}}
                 id="email"
                 placeholder="Your Email"
                 required
@@ -92,7 +91,7 @@ function ContactSection() {
             <div>
               <label htmlFor="message" className="sr-only">Message</label>
               <textarea
-                name="message"
+                name="message" // Match EmailJS template variable, e.g., {{{message}}}
                 id="message"
                 rows="6"
                 placeholder="Your Message"
@@ -103,11 +102,14 @@ function ContactSection() {
             <div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-md transition-colors shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+                disabled={isSubmitting} // Disable button while submitting
+                className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-md transition-colors shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800 disabled:opacity-50"
               >
-                SEND MESSAGE
+                {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
               </button>
             </div>
+            {submitStatus === 'success' && <p className="text-green-600 dark:text-green-400 mt-2">Message sent successfully!</p>}
+            {submitStatus === 'error' && <p className="text-red-600 dark:text-red-400 mt-2">Failed to send message. Please try again or contact me directly.</p>}
           </form>
         </div>
       </div>
