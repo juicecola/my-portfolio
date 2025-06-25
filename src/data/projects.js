@@ -1,6 +1,24 @@
 // src/data/projects.js
 export const aiProjects = [
   {
+    id: 'neuroscribe-content-pipeline', // Or use 'content-creation-ai' if updating
+    title: 'Neuroscribe: Multi-Agent AI Content Pipeline',
+    description: 'Developed "Neuroscribe," a multi-agent AI system using Google ADK and Vertex AI (Gemini & Imagen) to automate the creation of a complete content package—article, image, and social posts—from a single topic.',
+    imageUrl: '/my-portfolio/images/neuroscribe.png', // NEW IMAGE: e.g., a flow diagram
+    githubLink: 'https://github.com/juicecola/Content_Creation_AI', // Confirm this repo is "Neuroscribe"
+    demoLink: 'https://contentcreationai-efu5cu4kj9v3smd2pxgvlu.streamlit.app/', // Replace or set to null
+    technologies: [
+      'Python',
+      'Google ADK',
+      'Vertex AI',
+      'Gemini Pro', 
+      'Imagen',
+      'Multi-Agent Systems',
+      'AI Content Automation'
+    ]
+  },
+
+  {
     id: 'aiqtoolkit-enhancements',
     title: 'NVIDIA AIQToolkit: LLM Integrations, API & React Chat UI', // Updated title
     description: 'Enhanced a fork of NVIDIA\'s AIQToolkit by integrating Anthropic Claude and NVIDIA NIMs, implementing conversational memory, developing a backend API, and building a dedicated React & TypeScript chatbot UI for seamless agent interaction.', // Updated description
