@@ -1,7 +1,7 @@
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class', // Enable dark mode if you want (optional)
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -10,29 +10,36 @@ export default {
     extend: {
       colors: {
         'brand-primary': { // Electric Blue
-          light: '#3b82f6', // blue-500
-          DEFAULT: '#2563eb', // blue-600
-          dark: '#1d4ed8',   // blue-700
+          light: '#3b82f6',
+          DEFAULT: '#2563eb',
+          dark: '#1d4ed8',
         },
-        'brand-secondary': { // Vibrant Teal
-          light: '#2dd4bf', // teal-400
-          DEFAULT: '#14b8a6', // teal-500
-          dark: '#0d9488',   // teal-600
+        'brand-secondary': { // Data-pipeline Cyan
+          light: '#22d3ee',
+          DEFAULT: '#06b6d4',
+          dark: '#0891b2',
         },
-        'brand-accent': { // Warm Orange
-          light: '#fb923c', // orange-400
-          DEFAULT: '#f97316', // orange-500
-          dark: '#ea580c',   // orange-600
+        'brand-accent': { // Warm Amber (sparingly, for highlights)
+          light: '#fbbf24',
+          DEFAULT: '#f59e0b',
+          dark: '#d97706',
         },
-        'neutral-light': '#f8fafc', // slate-50 (example for light bg)
-        'neutral-dark': '#1e293b',  // slate-800 (example for dark bg)
-        'text-main-light': '#334155', // slate-700 (text on light bg)
-        'text-main-dark': '#e2e8f0',   // slate-200 (text on dark bg)
+        // Core "data infrastructure" dark palette
+        ink: {
+          950: '#05070a',
+          900: '#0b0f14',
+          800: '#111823',
+          700: '#1a2432',
+          600: '#293548',
+        },
+        'neutral-light': '#f8fafc',
+        'neutral-dark': '#1e293b',
+        'text-main-light': '#334155',
+        'text-main-dark': '#e2e8f0',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // Keep or change
-        // Add a more engaging display font if desired
-        // display: ['Poppins', 'sans-serif'], // Example
+        sans: ['Inter', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
     },
   },
