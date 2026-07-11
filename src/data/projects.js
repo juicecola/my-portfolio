@@ -23,22 +23,22 @@ export const aiProjects = [
     ]
   },
   {
-    id: 'neuroscribe-content-pipeline', // Or use 'content-creation-ai' if updating
-    title: 'Neuroscribe: Multi-Agent AI Content Pipeline',
-    description: 'Developed "Neuroscribe," a multi-agent AI system using Google ADK and Vertex AI (Gemini & Imagen) to automate the creation of a complete content package—article, image, and social posts—from a single topic.',
-    imageUrl: '/my-portfolio/images/neuroscribe.png', // NEW IMAGE: e.g., a flow diagram
-    githubLink: 'https://github.com/juicecola/Content_Creation_AI', // Confirm this repo is "Neuroscribe"
-    demoLink: 'https://contentcreationai-efu5cu4kj9v3smd2pxgvlu.streamlit.app/', // Replace or set to null
+    id: 'artisanal-crafts-marketplace',
+    title: 'Artisanal Crafts Marketplace',
+    description: 'A full-stack e-commerce platform for artisanal crafts, built with Flask. Handles product listings, cart and checkout flow, and order management backed by a relational database.',
+    imageUrl: '/my-portfolio/images/marketplace.png',
+    githubLink: 'https://github.com/juicecola/Artisanal-Crafts-MarketPlace',
+    demoLink: 'https://artisanal-crafts-marketplace.onrender.com',
     technologies: [
       'Python',
-      'Google ADK',
-      'Vertex AI',
-      'Gemini Pro', 
-      'Imagen',
-      'Multi-Agent Systems',
-      'AI Content Automation'
+      'Flask',
+      'SQLAlchemy',
+      'PostgreSQL',
+      'HTML/CSS',
+      'JavaScript',
+      'E-commerce'
     ]
-  },
+  },,
 
   {
     id: 'aiqtoolkit-enhancements',
