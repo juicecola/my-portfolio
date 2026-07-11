@@ -4,9 +4,9 @@ export const aiProjects = [
     id: 'nse-kenya-market-dashboard',
     title: 'NSE Kenya Market Dashboard: Full-Stack Data Pipeline & Analytics',
     description: 'Built an end-to-end data engineering pipeline for the Nairobi Securities Exchange — scraping daily market data, orchestrating ETL with Apache Airflow, loading into PostgreSQL, and serving it through a FastAPI backend to a React dashboard with a Power BI export.',
-    imageUrl: null, // TODO: add a screenshot to public/images/ and set the path here, e.g. '/my-portfolio/images/nse-dashboard.png'
-    githubLink: null, // TODO: add GitHub URL, e.g. 'https://github.com/juicecola/nse-dashboard'
-    demoLink: null, // TODO: add live demo URL, e.g. your Vercel frontend URL
+    imageUrl: '/my-portfolio/images/nse-dashboard.png',
+    githubLink: 'https://github.com/juicecola/nse-dashboard',
+    demoLink: 'https://nsedashboard-beta.vercel.app',
     technologies: [
       'Python',
       'Apache Airflow',

@@ -3,32 +3,33 @@ import { Link, NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className="bg-ink-900/90 backdrop-blur border-b border-ink-700 sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
-          Munyi
+        <Link
+          to="/"
+          className="font-mono text-lg text-slate-100 hover:text-brand-secondary transition-colors flex items-center gap-2"
+        >
+          <span className="text-brand-secondary">~</span>
+          <span>munyi</span>
+          <span className="text-slate-500">--data-engineer</span>
         </Link>
-        <div className="space-x-6">
+        <div className="space-x-6 font-mono text-sm">
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `text-gray-600 hover:text-blue-600 transition-colors ${isActive ? 'text-blue-600 font-semibold' : ''}`
+              `text-slate-400 hover:text-brand-secondary transition-colors ${isActive ? 'text-brand-secondary' : ''}`
             }
           >
-            Work
+            ./work
           </NavLink>
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `text-gray-600 hover:text-blue-600 transition-colors ${isActive ? 'text-blue-600 font-semibold' : ''}`
+              `text-slate-400 hover:text-brand-secondary transition-colors ${isActive ? 'text-brand-secondary' : ''}`
             }
           >
-            About
+            ./about
           </NavLink>
-          {/* Optional: Contact Link */}
-          {/* <a href="mailto:your.email@example.com" className="text-gray-600 hover:text-blue-600 transition-colors">
-            Contact
-          </a> */}
         </div>
       </div>
     </nav>
