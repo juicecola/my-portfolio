@@ -62,22 +62,19 @@ export const aiProjects = [
     ]
   },
   {
-    id: 'construct-agent',
-    title: 'ConstructAgent: AI Site Operations Assistant (ConTech Hackathon)',
-    description: 'Built an AI assistant for construction sites using Python (Flask), Dialogflow CX, and Africa\'s Talking to manage hazard logs, attendance, and deliveries via SMS/USSD, with a real-time React dashboard.',
-    imageUrl: '/my-portfolio/images/construct-agent-dashboard.png', // Create this image and place in my-ai-portfolio/public/images/
-    // or imageUrl: constructAgentImage,
-    githubLink: 'https:///github.com/juicecola/construct_agent_agent', // Replace YOUR_USERNAME with juicecola or your actual username
-    //demoLink: 'YOUR_CONSTRUCT_AGENT_DEMO_URL_OR_VIDEO_LINK_HERE', // Replace or set to null
+    id: 'chumz-ai-whatsapp-bot',
+    title: 'Chumz AI — WhatsApp Savings Assistant',
+    description: 'A Gemini-powered WhatsApp chatbot for a Kenyan micro-savings platform. Handles webhook verification, per-user conversation sessions, daily rate limiting, and automatic retries against the Gemini API, with a WhatsApp Business API integration for sending replies.',
+    imageUrl: '/my-portfolio/images/whatsapp.png',
+    githubLink: 'https://github.com/juicecola/chumz-demo-bot',
+    demoLink: 'https://drive.google.com/file/d/13hz7p0AKLkfOQCfilmhbXerXXZDIWz2U/view?usp=drive_link',
     technologies: [
       'Python',
-      'Flask',
-      'React',
-      'TypeScript',
-      'Dialogflow CX (NLP)',
-      'Africa\'s Talking (SMS/USSD)',
-      'API Development',
-      , // Add if applicable
+      'FastAPI',
+      'Google Gemini API',
+      'WhatsApp Business API',
+      'Webhooks',
+      'Async/Background Tasks'
     ]
   },,
   {
