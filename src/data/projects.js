@@ -39,6 +39,22 @@ export const aiProjects = [
       'E-commerce'
     ]
   },,
+  {
+    id: 'chumz-ai-whatsapp-bot',
+    title: 'Chumz AI — WhatsApp Savings Assistant',
+    description: 'A Gemini-powered WhatsApp chatbot for a Kenyan micro-savings platform. Handles webhook verification, per-user conversation sessions, daily rate limiting, and automatic retries against the Gemini API, with a WhatsApp Business API integration for sending replies.',
+    imageUrl: '/my-portfolio/images/whatsapp.png',
+    githubLink: 'https://github.com/juicecola/chumz-demo-bot',
+    demoLink: 'https://drive.google.com/file/d/13hz7p0AKLkfOQCfilmhbXerXXZDIWz2U/view?usp=drive_link',
+    technologies: [
+      'Python',
+      'FastAPI',
+      'Google Gemini API',
+      'WhatsApp Business API',
+      'Webhooks',
+      'Async/Background Tasks'
+    ]
+  },
 
   {
     id: 'aiqtoolkit-enhancements',
@@ -61,22 +77,7 @@ export const aiProjects = [
       // 'Streamlit (Legacy UI)', // Optional: keep if still relevant or remove
     ]
   },
-  {
-    id: 'chumz-ai-whatsapp-bot',
-    title: 'Chumz AI — WhatsApp Savings Assistant',
-    description: 'A Gemini-powered WhatsApp chatbot for a Kenyan micro-savings platform. Handles webhook verification, per-user conversation sessions, daily rate limiting, and automatic retries against the Gemini API, with a WhatsApp Business API integration for sending replies.',
-    imageUrl: '/my-portfolio/images/whatsapp.png',
-    githubLink: 'https://github.com/juicecola/chumz-demo-bot',
-    demoLink: 'https://drive.google.com/file/d/13hz7p0AKLkfOQCfilmhbXerXXZDIWz2U/view?usp=drive_link',
-    technologies: [
-      'Python',
-      'FastAPI',
-      'Google Gemini API',
-      'WhatsApp Business API',
-      'Webhooks',
-      'Async/Background Tasks'
-    ]
-  },,
+  ,
   {
     id: 'uchumi-connect-marketpulse',
     title: 'Marketpulse: AI News Analysis for SMBs (Nation Hackathon 2.0)',
